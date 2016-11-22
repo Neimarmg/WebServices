@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws.sercice.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws.sercice.com" xmlns:intf="http://ws.sercice.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ws.sercice.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="wsRetorno">
+    <complexType>
+     <sequence>
+      <element name="desc" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="wsRetornoResponse">
+    <complexType>
+     <sequence>
+      <element name="wsRetornoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="wsRetornoRequest">
+
+      <wsdl:part element="impl:wsRetorno" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="wsRetornoResponse">
+
+      <wsdl:part element="impl:wsRetornoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="calcws">
+
+      <wsdl:operation name="wsRetorno">
+
+         <wsdl:input message="impl:wsRetornoRequest" name="wsRetornoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:wsRetornoResponse" name="wsRetornoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="calcwsSoapBinding" type="impl:calcws">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="wsRetorno">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="wsRetornoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="wsRetornoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="calcwsService">
+
+      <wsdl:port binding="impl:calcwsSoapBinding" name="calcws">
+
+         <wsdlsoap:address location="http://localhost:8080/ws/services/calcws"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
