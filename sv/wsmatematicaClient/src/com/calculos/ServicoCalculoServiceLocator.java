@@ -1,5 +1,5 @@
 /**
- * CalculadoraServiceLocator.java
+ * ServicoCalculoServiceLocator.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,53 +7,53 @@
 
 package com.calculos;
 
-public class CalculadoraServiceLocator extends org.apache.axis.client.Service implements com.calculos.CalculadoraService {
+public class ServicoCalculoServiceLocator extends org.apache.axis.client.Service implements com.calculos.ServicoCalculoService {
 
-    public CalculadoraServiceLocator() {
+    public ServicoCalculoServiceLocator() {
     }
 
 
-    public CalculadoraServiceLocator(org.apache.axis.EngineConfiguration config) {
+    public ServicoCalculoServiceLocator(org.apache.axis.EngineConfiguration config) {
         super(config);
     }
 
-    public CalculadoraServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
+    public ServicoCalculoServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
         super(wsdlLoc, sName);
     }
 
-    // Use to get a proxy class for calculadora
-    private java.lang.String calculadora_address = "http://localhost:8080/wsmatematica/services/calculadora";
+    // Use to get a proxy class for servicoCalculo
+    private java.lang.String servicoCalculo_address = "http://localhost:8080/wsmatematica/services/servicoCalculo";
 
-    public java.lang.String getcalculadoraAddress() {
-        return calculadora_address;
+    public java.lang.String getservicoCalculoAddress() {
+        return servicoCalculo_address;
     }
 
     // The WSDD service name defaults to the port name.
-    private java.lang.String calculadoraWSDDServiceName = "calculadora";
+    private java.lang.String servicoCalculoWSDDServiceName = "servicoCalculo";
 
-    public java.lang.String getcalculadoraWSDDServiceName() {
-        return calculadoraWSDDServiceName;
+    public java.lang.String getservicoCalculoWSDDServiceName() {
+        return servicoCalculoWSDDServiceName;
     }
 
-    public void setcalculadoraWSDDServiceName(java.lang.String name) {
-        calculadoraWSDDServiceName = name;
+    public void setservicoCalculoWSDDServiceName(java.lang.String name) {
+        servicoCalculoWSDDServiceName = name;
     }
 
-    public com.calculos.Calculadora getcalculadora() throws javax.xml.rpc.ServiceException {
+    public com.calculos.ServicoCalculo getservicoCalculo() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
-            endpoint = new java.net.URL(calculadora_address);
+            endpoint = new java.net.URL(servicoCalculo_address);
         }
         catch (java.net.MalformedURLException e) {
             throw new javax.xml.rpc.ServiceException(e);
         }
-        return getcalculadora(endpoint);
+        return getservicoCalculo(endpoint);
     }
 
-    public com.calculos.Calculadora getcalculadora(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public com.calculos.ServicoCalculo getservicoCalculo(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            com.calculos.CalculadoraSoapBindingStub _stub = new com.calculos.CalculadoraSoapBindingStub(portAddress, this);
-            _stub.setPortName(getcalculadoraWSDDServiceName());
+            com.calculos.ServicoCalculoSoapBindingStub _stub = new com.calculos.ServicoCalculoSoapBindingStub(portAddress, this);
+            _stub.setPortName(getservicoCalculoWSDDServiceName());
             return _stub;
         }
         catch (org.apache.axis.AxisFault e) {
@@ -61,8 +61,8 @@ public class CalculadoraServiceLocator extends org.apache.axis.client.Service im
         }
     }
 
-    public void setcalculadoraEndpointAddress(java.lang.String address) {
-        calculadora_address = address;
+    public void setservicoCalculoEndpointAddress(java.lang.String address) {
+        servicoCalculo_address = address;
     }
 
     /**
@@ -72,9 +72,9 @@ public class CalculadoraServiceLocator extends org.apache.axis.client.Service im
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (com.calculos.Calculadora.class.isAssignableFrom(serviceEndpointInterface)) {
-                com.calculos.CalculadoraSoapBindingStub _stub = new com.calculos.CalculadoraSoapBindingStub(new java.net.URL(calculadora_address), this);
-                _stub.setPortName(getcalculadoraWSDDServiceName());
+            if (com.calculos.ServicoCalculo.class.isAssignableFrom(serviceEndpointInterface)) {
+                com.calculos.ServicoCalculoSoapBindingStub _stub = new com.calculos.ServicoCalculoSoapBindingStub(new java.net.URL(servicoCalculo_address), this);
+                _stub.setPortName(getservicoCalculoWSDDServiceName());
                 return _stub;
             }
         }
@@ -94,8 +94,8 @@ public class CalculadoraServiceLocator extends org.apache.axis.client.Service im
             return getPort(serviceEndpointInterface);
         }
         java.lang.String inputPortName = portName.getLocalPart();
-        if ("calculadora".equals(inputPortName)) {
-            return getcalculadora();
+        if ("servicoCalculo".equals(inputPortName)) {
+            return getservicoCalculo();
         }
         else  {
             java.rmi.Remote _stub = getPort(serviceEndpointInterface);
@@ -105,7 +105,7 @@ public class CalculadoraServiceLocator extends org.apache.axis.client.Service im
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("http://calculos.com", "calculadoraService");
+        return new javax.xml.namespace.QName("http://calculos.com", "servicoCalculoService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class CalculadoraServiceLocator extends org.apache.axis.client.Service im
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("http://calculos.com", "calculadora"));
+            ports.add(new javax.xml.namespace.QName("http://calculos.com", "servicoCalculo"));
         }
         return ports.iterator();
     }
@@ -123,8 +123,8 @@ public class CalculadoraServiceLocator extends org.apache.axis.client.Service im
     */
     public void setEndpointAddress(java.lang.String portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
         
-if ("calculadora".equals(portName)) {
-            setcalculadoraEndpointAddress(address);
+if ("servicoCalculo".equals(portName)) {
+            setservicoCalculoEndpointAddress(address);
         }
         else 
 { // Unknown Port Name

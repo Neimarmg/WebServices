@@ -10,15 +10,15 @@
     xmlns="http://xml.apache.org/axis/wsdd/"
     xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
 
-  <!-- Services from calculadoraService WSDL service -->
+  <!-- Services from servicoCalculoService WSDL service -->
 
-  <service name="calculadora" provider="java:RPC" style="wrapped" use="literal">
+  <service name="servicoCalculo" provider="java:RPC" style="wrapped" use="literal">
       <parameter name="wsdlTargetNamespace" value="http://calculos.com"/>
-      <parameter name="wsdlServiceElement" value="calculadoraService"/>
+      <parameter name="wsdlServiceElement" value="servicoCalculoService"/>
       <parameter name="schemaQualified" value="http://calculos.com"/>
-      <parameter name="wsdlServicePort" value="calculadora"/>
-      <parameter name="className" value="com.calculos.CalculadoraSoapBindingImpl"/>
-      <parameter name="wsdlPortType" value="calculadora"/>
+      <parameter name="wsdlServicePort" value="servicoCalculo"/>
+      <parameter name="className" value="com.calculos.ServicoCalculoSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="servicoCalculo"/>
       <parameter name="typeMappingVersion" value="1.2"/>
       <operation name="getResultado" qname="operNS:getResultado" xmlns:operNS="http://calculos.com" returnQName="retNS:getResultadoReturn" xmlns:retNS="http://calculos.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
         <parameter qname="pns:operacao" xmlns:pns="http://calculos.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>

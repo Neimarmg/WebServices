@@ -7,7 +7,7 @@
 <UL>
 <LI><A HREF="Input.jsp?method=2" TARGET="inputs"> getEndpoint()</A></LI>
 <LI><A HREF="Input.jsp?method=5" TARGET="inputs"> setEndpoint(java.lang.String)</A></LI>
-<LI><A HREF="Input.jsp?method=10" TARGET="inputs"> getCalculadora()</A></LI>
+<LI><A HREF="Input.jsp?method=10" TARGET="inputs"> getServicoCalculo()</A></LI>
 <LI><A HREF="Input.jsp?method=13" TARGET="inputs"> getResultado(java.lang.String,float,float)</A></LI>
 </UL>
 </BODY>

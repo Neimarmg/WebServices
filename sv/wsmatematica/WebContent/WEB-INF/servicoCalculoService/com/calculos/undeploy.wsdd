@@ -9,7 +9,7 @@
 <undeployment
     xmlns="http://xml.apache.org/axis/wsdd/">
 
-  <!-- Services from calculadoraService WSDL service -->
+  <!-- Services from servicoCalculoService WSDL service -->
 
-  <service name="calculadora"/>
+  <service name="servicoCalculo"/>
 </undeployment>
