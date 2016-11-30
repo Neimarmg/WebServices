@@ -1,0 +1,15 @@
+package M;
+
+public class Resultado {
+	static float resuldo;
+
+	public float getResuldo() {
+		return resuldo;
+	}
+
+	public void setResuldo(float resuldo) {
+		Resultado.resuldo = resuldo;
+	}
+	
+	
+}

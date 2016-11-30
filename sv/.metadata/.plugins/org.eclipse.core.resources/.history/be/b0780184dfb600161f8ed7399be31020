@@ -1,0 +1,18 @@
+package C;
+
+import java.rmi.RemoteException;
+
+import javax.xml.rpc.ServiceException;
+
+import com.calculos.ServicoCalculo;
+import com.calculos.ServicoCalculoServiceLocator;
+
+public class calcalador {
+	public static void criaOperacao() throws ServiceException, RemoteException {
+		ServicoCalculo sc = new ServicoCalculoServiceLocator().getservicoCalculo();
+		sc.getResultado(
+				V.View.digitaString("Operação"),
+				V.View.digitaFloat("Numerador"),
+				V.View.digitaFloat("Denominador"));
+	}
+}

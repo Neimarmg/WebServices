@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="org.eclipse.jdt.internal.compiler.env.ISourceMethod"/>
 <fullyQualifiedTypeName name="com.calculos.validador"/>
 <fullyQualifiedTypeName name="sun.invoke.empty.Empty"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="jdk.nashorn.internal.ir.VarNode"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.regexp.internal.recompile"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.lang.Float"/>
+<fullyQualifiedTypeName name="org.apache.coyote.http11.filters.VoidOutputFilter"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.app.app"/>
+<fullyQualifiedTypeName name="com.sun.glass.ui.View"/>
+<fullyQualifiedTypeName name="com.V.View"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="com.sun.java.swing.plaf.windows.WindowsInternalFrameTitlePane.ScalableIconUIResource"/>
+<fullyQualifiedTypeName name="com.calculos.ServicoCalculo"/>
+<fullyQualifiedTypeName name="com.calculos.ServicoCalculoServiceLocator"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="M.Resultado"/>
+<fullyQualifiedTypeName name="C.calcalador"/>
+<fullyQualifiedTypeName name="V.View"/>
+<fullyQualifiedTypeName name="com.calculos.Operador"/>
+<fullyQualifiedTypeName name="java.time.DayOfWeek"/>
+<fullyQualifiedTypeName name="com.calculos.Dados"/>
+<fullyQualifiedTypeName name="com.sun.jndi.url.corbaname.corbanameURLContextFactory"/>
+<fullyQualifiedTypeName name="com.calculos.Calculador"/>
+<fullyQualifiedTypeName name="com.calculos.Controlador"/>
 </qualifiedTypeNameHistroy>
