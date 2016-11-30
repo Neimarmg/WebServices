@@ -7,7 +7,7 @@ public class Controlador {
 	}
 	
 	
-	private static void carregaValores(){
+	/*private static void carregaValores(){
 		if (Operador.getOperacao().equals(".")) {
 			Dados.setNumerador(Dados.getNumerador());
 			carregaOperacao();
@@ -31,5 +31,5 @@ public class Controlador {
 		Operador.setOperacao(".");
 		carregaDados();
 		Calculador.imprimeCalculo();
-	}
+	}*/
 }
