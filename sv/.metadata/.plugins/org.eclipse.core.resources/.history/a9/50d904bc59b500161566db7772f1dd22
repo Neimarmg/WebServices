@@ -1,0 +1,10 @@
+package com.calculos;
+
+public class servicoCalculo {
+	Aritmetica calculo = new Aritmetica();
+	
+	public String getResultado(String operacao, float valor1, float valor2)throws Exception{
+		calculo.calcula(operacao, valor1, valor2);			
+		return String.valueOf(calculo.getResult());	
+	}
+}

@@ -5,18 +5,18 @@ public class Aritmetica {
 	String ex;
 	
 	
-	protected float getResult() {
-		return result;
+	protected String getResult() {
+		return String.valueOf(result);
 	}
 
 		
 	protected void setResult(float result) {
-		this.result = result;
+		this.result = result;		
 	}
-
+	
 	
 	protected void calcula(String operacao, float valor1, float valor2 ){
-		
+	
 		switch (operacao) {
 		
 		case "+":
@@ -36,9 +36,8 @@ public class Aritmetica {
 			break;
 		
 		default:
-			setResult(0);
+			setResult((Float) null);
 			break;
-		}	
-	}
-	
+		}		
+	}		
 }

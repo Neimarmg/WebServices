@@ -1,0 +1,7 @@
+package com.calculos;
+
+public class validador {
+	public String validaCampo(String valor){
+		return "0";
+	}
+}

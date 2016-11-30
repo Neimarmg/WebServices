@@ -1,0 +1,12 @@
+package com.calculos;
+
+public class validador {
+	
+	public String validaCampo(String valor, String msg){
+		if (valor == null || valor == "0"){
+			return msg;
+		}else{
+			return "0";
+		}	
+	}
+}

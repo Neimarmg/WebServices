@@ -1,0 +1,55 @@
+package com.calculos;
+
+import jdk.nashorn.internal.ir.VarNode;
+
+public class Aritmetica {
+	float result;
+	String ex;
+	
+	
+	protected String getResult() {
+		return String.valueOf(result);
+	}
+
+		
+	protected void setResult(float result) {
+		this.result = result;		
+	}
+	
+	protected float va(float v){
+		if(v!=0){
+			return v;
+		}else{
+			return (Float)null;
+		}
+		
+	}
+	
+	
+	protected void calcula(String operacao, float valor1, float valor2 ) throws Exception{
+	
+		switch (operacao) {
+		
+		case "+":
+			setResult(va(valor1));
+			//setResult((valor1+valor2));
+			break;
+		
+		case "-":
+			setResult((valor1-valor2));
+			break;
+		
+		case "/":
+			setResult((valor1/valor2));
+			break;
+			
+		case "*":
+			setResult((valor1*valor2));		
+			break;
+		
+		default:
+			setResult((Float) null);
+			break;
+		}		
+	}		
+}

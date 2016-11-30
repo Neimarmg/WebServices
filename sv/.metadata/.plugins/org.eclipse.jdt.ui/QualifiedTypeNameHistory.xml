@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="org.eclipse.jdt.internal.compiler.env.ISourceMethod"/>
+<fullyQualifiedTypeName name="com.calculos.validador"/>
+<fullyQualifiedTypeName name="sun.invoke.empty.Empty"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="jdk.nashorn.internal.ir.VarNode"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.regexp.internal.recompile"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.Float"/>
 </qualifiedTypeNameHistroy>

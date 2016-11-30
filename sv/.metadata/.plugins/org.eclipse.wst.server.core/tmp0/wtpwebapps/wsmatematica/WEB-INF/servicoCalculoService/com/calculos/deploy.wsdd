@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from servicoCalculoService WSDL service -->
+
+  <service name="servicoCalculo" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://calculos.com"/>
+      <parameter name="wsdlServiceElement" value="servicoCalculoService"/>
+      <parameter name="schemaQualified" value="http://calculos.com"/>
+      <parameter name="wsdlServicePort" value="servicoCalculo"/>
+      <parameter name="className" value="com.calculos.servicoCalculo"/>
+      <parameter name="wsdlPortType" value="servicoCalculo"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://calculos.com" xmlns:retNS="http://calculos.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getResultado" qname="operNS:getResultado" returnQName="retNS:getResultadoReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://calculos.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:operacao" type="tns:string"/>
+        <parameter xmlns:pns="http://calculos.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:valor1" type="tns:float"/>
+        <parameter xmlns:pns="http://calculos.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:valor2" type="tns:float"/>
+      </operation>
+      <parameter name="allowedMethods" value="getResultado"/>
+
+  </service>
+</deployment>

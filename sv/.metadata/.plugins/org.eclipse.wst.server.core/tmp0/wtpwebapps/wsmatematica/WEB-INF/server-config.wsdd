@@ -28,6 +28,15 @@
   <ns1:parameter name="className" value="org.apache.axis.utils.Admin"/>
   <ns1:namespace>http://xml.apache.org/axis/wsdd/</ns1:namespace>
  </ns1:service>
+ <ns1:service name="Aritmetica" provider="java:RPC" style="document" use="literal">
+  <ns1:parameter name="allowedMethods" value="*"/>
+  <ns1:parameter name="wsdlPortType" value="Aritmetica"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlServicePort" value="Aritmetica"/>
+  <ns1:parameter name="className" value="com.calculos.Aritmetica"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://calculos.com"/>
+  <ns1:parameter name="wsdlServiceElement" value="AritmeticaService"/>
+ </ns1:service>
  <ns1:service name="Version" provider="java:RPC">
   <ns1:parameter name="allowedMethods" value="getVersion"/>
   <ns1:parameter name="className" value="org.apache.axis.Version"/>
@@ -46,6 +55,21 @@
   <ns1:parameter name="schemaQualified" value="http://calculos.com"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://calculos.com"/>
   <ns1:parameter name="wsdlServiceElement" value="calculadoraService"/>
+ </ns1:service>
+ <ns1:service name="servicoCalculo" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getResultado" qname="ns2:getResultado" returnQName="ns2:getResultadoReturn" returnType="xsd:string" soapAction="" xmlns:ns2="http://calculos.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns2:operacao" type="xsd:string"/>
+   <ns1:parameter qname="ns2:valor1" type="xsd:float"/>
+   <ns1:parameter qname="ns2:valor2" type="xsd:float"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getResultado"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="servicoCalculo"/>
+  <ns1:parameter name="className" value="com.calculos.servicoCalculo"/>
+  <ns1:parameter name="wsdlServicePort" value="servicoCalculo"/>
+  <ns1:parameter name="schemaQualified" value="http://calculos.com"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://calculos.com"/>
+  <ns1:parameter name="wsdlServiceElement" value="servicoCalculoService"/>
  </ns1:service>
  <ns1:transport name="http">
   <ns1:requestFlow>
