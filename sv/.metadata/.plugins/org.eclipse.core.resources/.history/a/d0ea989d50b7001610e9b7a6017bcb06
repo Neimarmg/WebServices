@@ -1,0 +1,25 @@
+package com.calculadora.aplicacao.App;
+
+import java.rmi.RemoteException;
+
+import javax.xml.rpc.ServiceException;
+
+import com.calculadora.aplicacao.C.parametrizador;
+import com.calculadora.aplicacao.V.View;
+
+public class Start {
+	
+	public static void main(String args[]) throws ServiceException {
+		View.msgl();
+		try {
+			
+			parametrizador.criaOperacao();
+			parametrizador.print();
+			
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+}

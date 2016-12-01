@@ -1,0 +1,33 @@
+package C;
+
+import java.rmi.RemoteException;
+import javax.xml.rpc.ServiceException;
+import com.calculadora.CalculoWebService;
+import com.calculadora.CalculoWebServiceServiceLocator;
+
+
+import M.Resultado;
+import V.View;
+
+public class calcalador {	
+	private static CalculoWebService sc;
+	
+	public static void criaOperacao() throws ServiceException {		
+		try {
+			sc = new CalculoWebServiceServiceLocator().getCalculoWebService();
+			Resultado.setResuldo(sc.getResultado(
+					V.View.digitaString("Operação"),
+					V.View.digitaFloat("Numerador"),
+					V.View.digitaFloat("Denominador")));
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	public static void print() {
+		View.msgc("Resuldado:"+Resultado.getResuldo());
+		
+	}
+}

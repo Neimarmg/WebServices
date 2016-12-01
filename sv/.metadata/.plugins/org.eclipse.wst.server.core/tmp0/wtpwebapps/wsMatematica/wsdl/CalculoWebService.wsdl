@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://calculadora.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://calculadora.com" xmlns:intf="http://calculadora.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://calculadora.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getResultado">
+    <complexType>
+     <sequence>
+      <element name="operacao" type="xsd:string"/>
+      <element name="numerador" type="xsd:float"/>
+      <element name="Denonominador" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getResultadoResponse">
+    <complexType>
+     <sequence>
+      <element name="getResultadoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getResultadoResponse">
+
+      <wsdl:part element="impl:getResultadoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getResultadoRequest">
+
+      <wsdl:part element="impl:getResultado" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="CalculoWebService">
+
+      <wsdl:operation name="getResultado">
+
+         <wsdl:input message="impl:getResultadoRequest" name="getResultadoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getResultadoResponse" name="getResultadoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="CalculoWebServiceSoapBinding" type="impl:CalculoWebService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getResultado">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getResultadoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getResultadoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="CalculoWebServiceService">
+
+      <wsdl:port binding="impl:CalculoWebServiceSoapBinding" name="CalculoWebService">
+
+         <wsdlsoap:address location="http://localhost:8080/wsMatematica/services/CalculoWebService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

@@ -1,4 +1,4 @@
-!SESSION 2016-11-25 08:47:45.155 -----------------------------------------------
+!SESSION 2016-11-30 19:14:46.978 -----------------------------------------------
 eclipse.buildId=4.5.0.I20150603-2000
 java.version=1.8.0_111
 java.vendor=Oracle Corporation
@@ -6,62 +6,159 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
 Framework arguments:  -product org.eclipse.epp.package.jee.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.egit.ui 2 0 2016-11-25 08:47:57.308
+!ENTRY org.eclipse.egit.ui 2 0 2016-11-30 19:15:04.514
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\moises'. If this is
+user global configuration and to define the default location to store repositories: 'C:\Users\neimar'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
-!ENTRY org.eclipse.equinox.event 4 0 2016-11-25 08:47:59.855
-!MESSAGE Exception while dispatching event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/application/ApplicationElement/tags/REMOVE] {ChangedElement=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@5a45c218 (elementId: stickyFolderRight, tags: [active], contributorURI: null) (widget: CTabFolder {}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@47a72c32, toBeRendered: false, onTop: false, visible: true, containerData: 2500, accessibilityPhrase: null), Widget=CTabFolder {}, AttName=tags, EventType=REMOVE, Position=1, OldValue=Maximized} to handler org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler@4437af21
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-11-30 19:20:46.372
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jdt.launching 4 150 2016-11-30 19:20:54.141
+!MESSAGE The project: wsmatematicaClient which is referenced by the classpath, does not exist.
+
+!ENTRY org.eclipse.core.resources 4 2 2016-11-30 19:23:32.736
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
 !STACK 0
-org.eclipse.e4.core.di.InjectionException: java.lang.IllegalStateException: Application does not have an active window
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:56)
-	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:186)
-	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
-	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4761)
-	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:211)
-	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:53)
-	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
-	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
-	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:85)
-	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
-	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
-	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:249)
-	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.remove(NotifyingListImpl.java:725)
-	at org.eclipse.emf.common.util.AbstractEList.remove(AbstractEList.java:462)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeTopicToBeRendered(PartRenderingEngine.java:157)
+java.lang.RuntimeException: Exception(s) unloading resources - check log files
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.removeAndUnloadAllResources(ProjectResourceSetImpl.java:892)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.release(ProjectResourceSetImpl.java:866)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.release(ResourceSetWorkbenchEditSynchronizer.java:222)
+	at org.eclipse.jem.util.emf.workbench.ResourceSetWorkbenchSynchronizer.resourceChanged(ResourceSetWorkbenchSynchronizer.java:184)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.resourceChanged(ResourceSetWorkbenchEditSynchronizer.java:137)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.handleEvent(NotificationManager.java:265)
+	at org.eclipse.core.internal.resources.Workspace.broadcastEvent(Workspace.java:368)
+	at org.eclipse.core.internal.resources.Resource.broadcastPreDeleteEvent(Resource.java:1884)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:766)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:323)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:160)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.jst.servlet.ui 4 0 2016-11-30 19:23:34.187
+!MESSAGE ClienteServer does not exist
+!STACK 1
+Java Model Exception: Java Model Status [ClienteServer does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:1850)
+	at org.eclipse.jst.servlet.ui.internal.navigator.CompressedJavaProject.getNonExternalSourceFolders(CompressedJavaProject.java:81)
+	at org.eclipse.jst.servlet.ui.internal.navigator.CompressedJavaProject.getJavaElement(CompressedJavaProject.java:106)
+	at org.eclipse.jst.servlet.ui.internal.navigator.WebJavaLabelProvider.getText(WebJavaLabelProvider.java:42)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateCommonLabelProvider.getText(SafeDelegateCommonLabelProvider.java:112)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateCommonLabelProvider.getStyledText(SafeDelegateCommonLabelProvider.java:120)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceLabelProvider.findStyledText(NavigatorContentServiceLabelProvider.java:167)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceLabelProvider.getStyledText(NavigatorContentServiceLabelProvider.java:153)
+	at org.eclipse.ui.internal.navigator.NavigatorDecoratingLabelProvider$StyledLabelProviderAdapter.getStyledText(NavigatorDecoratingLabelProvider.java:63)
+	at org.eclipse.jface.viewers.DelegatingStyledCellLabelProvider.getStyledText(DelegatingStyledCellLabelProvider.java:206)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.getStyledText(DecoratingStyledCellLabelProvider.java:199)
+	at org.eclipse.jface.viewers.DelegatingStyledCellLabelProvider.update(DelegatingStyledCellLabelProvider.java:106)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.update(DecoratingStyledCellLabelProvider.java:136)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:154)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:949)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:114)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1029)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:473)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2176)
+	at org.eclipse.jface.viewers.StructuredViewer.internalUpdate(StructuredViewer.java:2159)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:2097)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:541)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:510)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:2041)
+	at org.eclipse.jface.viewers.StructuredViewer.handleLabelProviderChanged(StructuredViewer.java:1208)
+	at org.eclipse.ui.navigator.CommonViewer.handleLabelProviderChanged(CommonViewer.java:236)
+	at org.eclipse.jface.viewers.ContentViewer$1.labelProviderChanged(ContentViewer.java:99)
+	at org.eclipse.jface.viewers.BaseLabelProvider$1.run(BaseLabelProvider.java:72)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.BaseLabelProvider.fireLabelProviderChanged(BaseLabelProvider.java:69)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider$1.labelProviderChanged(DecoratingStyledCellLabelProvider.java:78)
+	at org.eclipse.ui.internal.decorators.DecoratorManager$1.run(DecoratorManager.java:446)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.fireListener(DecoratorManager.java:443)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$3.runInUIThread(DecorationScheduler.java:536)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:172)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:387)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.run(RefactoringWizardDialog2.java:331)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.internalPerformFinish(RefactoringWizard.java:637)
+	at org.eclipse.ltk.ui.refactoring.UserInputWizardPage.performFinish(UserInputWizardPage.java:153)
+	at org.eclipse.ltk.ui.refactoring.resource.DeleteResourcesWizard$DeleteResourcesRefactoringConfigurationPage.performFinish(DeleteResourcesWizard.java:202)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.performFinish(RefactoringWizard.java:710)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.okPressed(RefactoringWizardDialog2.java:455)
+	at org.eclipse.jface.dialogs.Dialog.buttonPressed(Dialog.java:466)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:827)
+	at org.eclipse.jface.window.Window.open(Window.java:803)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation$1.run(RefactoringWizardOpenOperation.java:187)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:202)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:122)
+	at org.eclipse.ltk.internal.ui.refactoring.actions.DeleteResourcesHandler.execute(DeleteResourcesHandler.java:40)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:295)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
-	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:83)
-	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
-	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
-	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:85)
-	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
-	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
-	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:303)
-	at org.eclipse.e4.ui.workbench.addons.cleanupaddon.CleanupAddon$2.run(CleanupAddon.java:317)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:252)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:234)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:493)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:486)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommandInContext(LegacyHandlerService.java:396)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.runCommand(LTKLauncher.java:96)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.openDeleteWizard(LTKLauncher.java:48)
+	at org.eclipse.ui.actions.DeleteResourceAction.run(DeleteResourceAction.java:454)
+	at org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction.run(DeleteAction.java:197)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:275)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:251)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
@@ -83,57 +180,200 @@ org.eclipse.e4.core.di.InjectionException: java.lang.IllegalStateException: Appl
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-Caused by: java.lang.IllegalStateException: Application does not have an active window
-	at org.eclipse.e4.ui.internal.workbench.ApplicationPartServiceImpl.getActiveWindowService(ApplicationPartServiceImpl.java:43)
-	at org.eclipse.e4.ui.internal.workbench.ApplicationPartServiceImpl.requestActivation(ApplicationPartServiceImpl.java:82)
-	at org.eclipse.e4.ui.internal.workbench.ApplicationPartServiceImpl.requestActivation(ApplicationPartServiceImpl.java:82)
-	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.unzoom(MinMaxAddon.java:826)
-	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.subscribeTopicTagsChanged(MinMaxAddon.java:372)
-	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-11-30 19:23:34.203
+!MESSAGE ClienteServer does not exist
+
+!ENTRY org.eclipse.jst.servlet.ui 4 0 2016-11-30 19:23:34.250
+!MESSAGE ClienteServer does not exist
+!STACK 1
+Java Model Exception: Java Model Status [ClienteServer does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:1850)
+	at org.eclipse.jst.servlet.ui.internal.navigator.CompressedJavaProject.getNonExternalSourceFolders(CompressedJavaProject.java:81)
+	at org.eclipse.jst.servlet.ui.internal.navigator.CompressedJavaProject.getJavaElement(CompressedJavaProject.java:106)
+	at org.eclipse.jst.servlet.ui.internal.navigator.WebJavaLabelProvider.getImage(WebJavaLabelProvider.java:30)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateCommonLabelProvider.getImage(SafeDelegateCommonLabelProvider.java:107)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceLabelProvider.findImage(NavigatorContentServiceLabelProvider.java:199)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceLabelProvider.getColumnImage(NavigatorContentServiceLabelProvider.java:107)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceLabelProvider.getImage(NavigatorContentServiceLabelProvider.java:99)
+	at org.eclipse.ui.internal.navigator.NavigatorDecoratingLabelProvider$StyledLabelProviderAdapter.getImage(NavigatorDecoratingLabelProvider.java:57)
+	at org.eclipse.jface.viewers.DelegatingStyledCellLabelProvider.getImage(DelegatingStyledCellLabelProvider.java:195)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.getImage(DecoratingStyledCellLabelProvider.java:173)
+	at org.eclipse.jface.viewers.DelegatingStyledCellLabelProvider.update(DelegatingStyledCellLabelProvider.java:121)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.update(DecoratingStyledCellLabelProvider.java:136)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:154)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:949)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:114)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1029)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:473)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2176)
+	at org.eclipse.jface.viewers.StructuredViewer.internalUpdate(StructuredViewer.java:2159)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:2097)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:541)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:510)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:2041)
+	at org.eclipse.jface.viewers.StructuredViewer.handleLabelProviderChanged(StructuredViewer.java:1208)
+	at org.eclipse.ui.navigator.CommonViewer.handleLabelProviderChanged(CommonViewer.java:236)
+	at org.eclipse.jface.viewers.ContentViewer$1.labelProviderChanged(ContentViewer.java:99)
+	at org.eclipse.jface.viewers.BaseLabelProvider$1.run(BaseLabelProvider.java:72)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.BaseLabelProvider.fireLabelProviderChanged(BaseLabelProvider.java:69)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider$1.labelProviderChanged(DecoratingStyledCellLabelProvider.java:78)
+	at org.eclipse.ui.internal.decorators.DecoratorManager$1.run(DecoratorManager.java:446)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.fireListener(DecoratorManager.java:443)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$3.runInUIThread(DecorationScheduler.java:536)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:172)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:387)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.run(RefactoringWizardDialog2.java:331)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.internalPerformFinish(RefactoringWizard.java:637)
+	at org.eclipse.ltk.ui.refactoring.UserInputWizardPage.performFinish(UserInputWizardPage.java:153)
+	at org.eclipse.ltk.ui.refactoring.resource.DeleteResourcesWizard$DeleteResourcesRefactoringConfigurationPage.performFinish(DeleteResourcesWizard.java:202)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.performFinish(RefactoringWizard.java:710)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.okPressed(RefactoringWizardDialog2.java:455)
+	at org.eclipse.jface.dialogs.Dialog.buttonPressed(Dialog.java:466)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:827)
+	at org.eclipse.jface.window.Window.open(Window.java:803)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation$1.run(RefactoringWizardOpenOperation.java:187)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:202)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:122)
+	at org.eclipse.ltk.internal.ui.refactoring.actions.DeleteResourcesHandler.execute(DeleteResourcesHandler.java:40)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:295)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
-	... 65 more
-!SESSION 2016-11-25 08:48:18.036 -----------------------------------------------
-eclipse.buildId=4.5.0.I20150603-2000
-java.version=1.8.0_111
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data D:\Neimar\GitHub\WebServices\sv -product org.eclipse.epp.package.jee.product
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:252)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:234)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:493)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:486)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommandInContext(LegacyHandlerService.java:396)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.runCommand(LTKLauncher.java:96)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.openDeleteWizard(LTKLauncher.java:48)
+	at org.eclipse.ui.actions.DeleteResourceAction.run(DeleteResourceAction.java:454)
+	at org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction.run(DeleteAction.java:197)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:275)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:251)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-11-30 19:23:34.250
+!MESSAGE ClienteServer does not exist
 
-!ENTRY org.eclipse.egit.ui 2 0 2016-11-25 08:48:27.953
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\moises'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-!SESSION 2016-11-28 07:16:19.289 -----------------------------------------------
-eclipse.buildId=4.5.0.I20150603-2000
-java.version=1.8.0_111
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-11-28 07:16:50.873
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\moises'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.ltk.core.refactoring 4 10009 2016-11-28 07:19:20.432
-!MESSAGE Participant 'JavaEEServerRefParticipant' removed due to the following exception
+!ENTRY org.eclipse.jst.jee 4 0 2016-11-30 19:50:29.548
+!MESSAGE <project root> [in Calculadora] is not on its project's build path
 !STACK 1
-org.eclipse.core.runtime.CoreException: The Tomcat server configuration at \Servers\Tomcat v7.0 Server at localhost-config is missing. Check the server for errors.
-	at org.eclipse.jst.server.tomcat.core.internal.TomcatServer.getTomcatConfiguration(TomcatServer.java:99)
-	at org.eclipse.jst.server.tomcat.core.internal.TomcatServer.modifyModules(TomcatServer.java:535)
-	at org.eclipse.wst.server.core.internal.ServerWorkingCopy.modifyModules(ServerWorkingCopy.java:551)
-	at org.eclipse.wst.server.core.ServerUtil.modifyModules(ServerUtil.java:398)
-	at org.eclipse.jst.javaee.ltk.core.participant.JavaEEServerRefRefactorParticipant.updateServerRefs(JavaEEServerRefRefactorParticipant.java:53)
-	at org.eclipse.jst.javaee.ltk.core.participant.JavaEEServerRefRefactorParticipant.access$1(JavaEEServerRefRefactorParticipant.java:41)
-	at org.eclipse.jst.javaee.ltk.core.participant.JavaEEServerRefRefactorParticipant$RemoveProjectFromServersChange.perform(JavaEEServerRefRefactorParticipant.java:180)
+Java Model Exception: Java Model Status [<project root> [in Calculadora] is not on its project's build path]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getKind(PackageFragmentRoot.java:486)
+	at org.eclipse.jdt.internal.core.PackageFragment.getKind(PackageFragment.java:293)
+	at org.eclipse.jdt.internal.core.PackageFragment.getCompilationUnits(PackageFragment.java:225)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.recursevilyProcessPackages(AbstractAnnotationModelProvider.java:511)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.recursevilyProcessPackages(AbstractAnnotationModelProvider.java:527)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.processChangedProjectChildren(AbstractAnnotationModelProvider.java:501)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.processChangedProject(AbstractAnnotationModelProvider.java:492)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.internalPostChange(AbstractAnnotationModelProvider.java:457)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.elementChanged(AbstractAnnotationModelProvider.java:448)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1662)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1652)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1486)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1462)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2074)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2250)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:106)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2016-11-30 19:50:29.548
+!MESSAGE <project root> [in Calculadora] is not on its project's build path
+
+!ENTRY org.eclipse.core.resources 4 2 2016-11-30 19:50:42.936
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.RuntimeException: Exception(s) unloading resources - check log files
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.removeAndUnloadAllResources(ProjectResourceSetImpl.java:892)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.release(ProjectResourceSetImpl.java:866)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.release(ResourceSetWorkbenchEditSynchronizer.java:222)
+	at org.eclipse.jem.util.emf.workbench.ResourceSetWorkbenchSynchronizer.resourceChanged(ResourceSetWorkbenchSynchronizer.java:184)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.resourceChanged(ResourceSetWorkbenchEditSynchronizer.java:137)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.handleEvent(NotificationManager.java:265)
+	at org.eclipse.core.internal.resources.Workspace.broadcastEvent(Workspace.java:368)
+	at org.eclipse.core.internal.resources.Resource.broadcastPreDeleteEvent(Resource.java:1884)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:766)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:323)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:160)
 	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
 	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
 	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
@@ -144,81 +384,480 @@ org.eclipse.core.runtime.CoreException: The Tomcat server configuration at \Serv
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
 	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
-!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-11-28 07:19:20.434
-!MESSAGE The Tomcat server configuration at \Servers\Tomcat v7.0 Server at localhost-config is missing. Check the server for errors.
 
-!ENTRY org.eclipse.wst.validation 4 0 2016-11-28 07:19:21.039
-!MESSAGE IWAE0027E Could not retrieve the validation configuration for resource wsmatematica.
+!ENTRY org.eclipse.core.resources 4 2 2016-11-30 19:55:53.488
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
 !STACK 0
-java.lang.reflect.InvocationTargetException: IWAE0027E Could not retrieve the validation configuration for resource wsmatematica.
-	at org.eclipse.wst.validation.internal.ConfigurationManager.getProjectConfiguration(ConfigurationManager.java:135)
-	at org.eclipse.wst.validation.internal.ConfigurationManager.getConfiguration(ConfigurationManager.java:251)
-	at org.eclipse.wst.validation.internal.ValManager.getValidatorsNotCached(ValManager.java:226)
-	at org.eclipse.wst.validation.internal.ValManager.access$1(ValManager.java:220)
-	at org.eclipse.wst.validation.internal.ValManager$ValidatorCache.getValidatorsCached(ValManager.java:1263)
-	at org.eclipse.wst.validation.internal.ValManager.getValidators(ValManager.java:197)
-	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:668)
-	at org.eclipse.wst.validation.internal.ValBuilderJob$Visitor.visit(ValBuilderJob.java:327)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
-	at org.eclipse.wst.validation.internal.ValBuilderJob.deltaBuild(ValBuilderJob.java:211)
-	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:179)
-	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: org.eclipse.core.internal.resources.ResourceException: Resource '/wsmatematica' does not exist.
-	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:334)
-	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:208)
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:140)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:214)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1206)
-	at org.eclipse.wst.validation.internal.ConfigurationManager.getProjectConfiguration(ConfigurationManager.java:126)
-	... 19 more
-Root exception:
-org.eclipse.core.internal.resources.ResourceException: Resource '/wsmatematica' does not exist.
-	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:334)
-	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:208)
-	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:140)
-	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:214)
-	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1206)
-	at org.eclipse.wst.validation.internal.ConfigurationManager.getProjectConfiguration(ConfigurationManager.java:126)
-	at org.eclipse.wst.validation.internal.ConfigurationManager.getConfiguration(ConfigurationManager.java:251)
-	at org.eclipse.wst.validation.internal.ValManager.getValidatorsNotCached(ValManager.java:226)
-	at org.eclipse.wst.validation.internal.ValManager.access$1(ValManager.java:220)
-	at org.eclipse.wst.validation.internal.ValManager$ValidatorCache.getValidatorsCached(ValManager.java:1263)
-	at org.eclipse.wst.validation.internal.ValManager.getValidators(ValManager.java:197)
-	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:668)
-	at org.eclipse.wst.validation.internal.ValBuilderJob$Visitor.visit(ValBuilderJob.java:327)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
-	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
-	at org.eclipse.wst.validation.internal.ValBuilderJob.deltaBuild(ValBuilderJob.java:211)
-	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:179)
-	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+java.lang.RuntimeException: Exception(s) unloading resources - check log files
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.removeAndUnloadAllResources(ProjectResourceSetImpl.java:892)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.release(ProjectResourceSetImpl.java:866)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.release(ResourceSetWorkbenchEditSynchronizer.java:222)
+	at org.eclipse.jem.util.emf.workbench.ResourceSetWorkbenchSynchronizer.resourceChanged(ResourceSetWorkbenchSynchronizer.java:184)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.resourceChanged(ResourceSetWorkbenchEditSynchronizer.java:137)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.handleEvent(NotificationManager.java:265)
+	at org.eclipse.core.internal.resources.Workspace.broadcastEvent(Workspace.java:368)
+	at org.eclipse.core.internal.resources.Resource.broadcastPreDeleteEvent(Resource.java:1884)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:766)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:323)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:160)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
 
-!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2016-11-28 07:19:21.059
+!ENTRY org.eclipse.jface 4 0 2016-11-30 19:55:53.566
+!MESSAGE Unhandled event loop exception during blocked modal context.
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.core.runtime.AssertionFailedException: null argument:)
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:172)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:387)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.run(RefactoringWizardDialog2.java:331)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.internalPerformFinish(RefactoringWizard.java:637)
+	at org.eclipse.ltk.ui.refactoring.UserInputWizardPage.performFinish(UserInputWizardPage.java:153)
+	at org.eclipse.ltk.ui.refactoring.resource.DeleteResourcesWizard$DeleteResourcesRefactoringConfigurationPage.performFinish(DeleteResourcesWizard.java:202)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.performFinish(RefactoringWizard.java:710)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.okPressed(RefactoringWizardDialog2.java:455)
+	at org.eclipse.jface.dialogs.Dialog.buttonPressed(Dialog.java:466)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:827)
+	at org.eclipse.jface.window.Window.open(Window.java:803)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation$1.run(RefactoringWizardOpenOperation.java:187)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:202)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:122)
+	at org.eclipse.ltk.internal.ui.refactoring.actions.DeleteResourcesHandler.execute(DeleteResourcesHandler.java:40)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:295)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90)
+	at sun.reflect.GeneratedMethodAccessor119.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:252)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:234)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:493)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:486)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommandInContext(LegacyHandlerService.java:396)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.runCommand(LTKLauncher.java:96)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.openDeleteWizard(LTKLauncher.java:48)
+	at org.eclipse.ui.actions.DeleteResourceAction.run(DeleteResourceAction.java:454)
+	at org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction.run(DeleteAction.java:197)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:275)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:251)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: org.eclipse.core.runtime.AssertionFailedException: null argument:
+	at org.eclipse.core.runtime.Assert.isNotNull(Assert.java:85)
+	at org.eclipse.core.runtime.Assert.isNotNull(Assert.java:73)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.assertElementsNotNull(AbstractTreeViewer.java:1399)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1367)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:906)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2645)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1916)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1891)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1848)
+	at org.eclipse.ui.navigator.CommonViewer.internalRefresh(CommonViewer.java:527)
+	at org.eclipse.jface.viewers.StructuredViewer$8.run(StructuredViewer.java:1554)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1462)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:366)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1423)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1551)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:534)
+	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:344)
+	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:490)
+	at org.eclipse.jst.jee.ui.internal.navigator.JEE5ContentProvider$1.run(JEE5ContentProvider.java:145)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 75 more
+
+!ENTRY org.eclipse.core.filesystem 4 272 2016-11-30 20:40:13.465
+!MESSAGE Could not move: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-discovery-0.2.jar.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:135)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:413)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:371)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:95)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:151)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:109)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:351)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:358)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:810)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1831)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-discovery-0.2.jar.
+!SUBENTRY 1 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:13.465
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 2 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:13.465
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-discovery-0.2.jar.
+
+!ENTRY org.eclipse.core.filesystem 4 272 2016-11-30 20:40:13.587
+!MESSAGE Could not move: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-logging.jar.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:135)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:413)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:371)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:95)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:151)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:109)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:351)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:358)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:810)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1831)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-logging.jar.
+!SUBENTRY 1 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:13.587
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 2 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:13.587
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-logging.jar.
+
+!ENTRY org.eclipse.core.filesystem 4 272 2016-11-30 20:40:13.644
+!MESSAGE Could not move: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\jaxrpc.jar.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:135)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:413)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:371)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:95)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:151)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:109)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:351)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:358)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:810)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1831)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\jaxrpc.jar.
+!SUBENTRY 1 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:13.645
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 2 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:13.645
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\jaxrpc.jar.
+
+!ENTRY org.eclipse.core.filesystem 4 272 2016-11-30 20:40:13.703
+!MESSAGE Could not move: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\saaj.jar.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:135)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:413)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:371)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:95)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:151)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:109)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:351)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:358)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:810)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1831)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\saaj.jar.
+!SUBENTRY 1 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:13.703
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 2 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:13.703
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\saaj.jar.
+
+!ENTRY org.eclipse.core.filesystem 4 272 2016-11-30 20:40:13.755
+!MESSAGE Could not move: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\webserviceutils.jar.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:135)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:413)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:371)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:95)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:151)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:109)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:351)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:358)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:810)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1831)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\webserviceutils.jar.
+!SUBENTRY 1 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:13.756
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 2 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:13.756
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\webserviceutils.jar.
+
+!ENTRY org.eclipse.core.filesystem 4 272 2016-11-30 20:40:13.849
+!MESSAGE Could not move: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\wsdl4j.jar.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:135)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:413)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:371)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:54)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:95)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:118)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.recursiveKeepHistory(DeleteVisitor.java:113)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:57)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:151)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:109)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:351)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:358)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:810)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1831)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\wsdl4j.jar.
+!SUBENTRY 1 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:13.849
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 2 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:13.849
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\wsdl4j.jar.
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2016-11-30 20:40:14.246
 !MESSAGE Internal Error
 !STACK 1
-org.eclipse.core.runtime.CoreException: The Tomcat server configuration at \Servers\Tomcat v7.0 Server at localhost-config is missing. Check the server for errors.
-	at org.eclipse.jst.server.tomcat.core.internal.TomcatServer.getTomcatConfiguration(TomcatServer.java:99)
-	at org.eclipse.jst.server.tomcat.core.internal.TomcatServer.modifyModules(TomcatServer.java:535)
-	at org.eclipse.wst.server.core.internal.ServerWorkingCopy.modifyModules(ServerWorkingCopy.java:551)
-	at org.eclipse.wst.server.core.ServerUtil.modifyModules(ServerUtil.java:398)
-	at org.eclipse.jst.javaee.ltk.core.participant.JavaEEServerRefRefactorParticipant.updateServerRefs(JavaEEServerRefRefactorParticipant.java:53)
-	at org.eclipse.jst.javaee.ltk.core.participant.JavaEEServerRefRefactorParticipant.access$1(JavaEEServerRefRefactorParticipant.java:41)
-	at org.eclipse.jst.javaee.ltk.core.participant.JavaEEServerRefRefactorParticipant$RemoveProjectFromServersChange.perform(JavaEEServerRefRefactorParticipant.java:180)
+Java Model Exception: Core Exception [code 273] Problems encountered while deleting resources.
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:50)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
 	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
 	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
 	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
@@ -228,27 +867,196 @@ org.eclipse.core.runtime.CoreException: The Tomcat server configuration at \Serv
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
 	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
-!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-11-28 07:19:21.060
-!MESSAGE The Tomcat server configuration at \Servers\Tomcat v7.0 Server at localhost-config is missing. Check the server for errors.
+Contains: Could not delete '/calculador/WebContent'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:354)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:358)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:810)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1831)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\axis.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-discovery-0.2.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-logging.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\jaxrpc.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\saaj.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\webserviceutils.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\wsdl4j.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent.
+Caused by: org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:794)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete '/calculador/WebContent'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:354)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:358)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:810)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1831)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\axis.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-discovery-0.2.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-logging.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\jaxrpc.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\saaj.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\webserviceutils.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\wsdl4j.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2016-11-30 20:40:14.247
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2016-11-30 20:40:14.247
+!MESSAGE Could not delete '/calculador/WebContent'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:354)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:358)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:810)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1831)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:113)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5409)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:116)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\axis.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-discovery-0.2.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-logging.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\jaxrpc.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\saaj.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\webserviceutils.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\wsdl4j.jar.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF.
+Contains: Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent.
+!SUBENTRY 3 org.eclipse.core.resources 4 273 2016-11-30 20:40:14.249
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:14.249
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:14.249
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\axis.jar.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:14.249
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-discovery-0.2.jar.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:14.249
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\commons-logging.jar.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:14.249
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\jaxrpc.jar.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:14.249
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\saaj.jar.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:14.249
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\webserviceutils.jar.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:14.249
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib\wsdl4j.jar.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:14.249
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF\lib.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:14.249
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent\WEB-INF.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2016-11-30 20:40:14.249
+!MESSAGE Could not delete: Q:\Neimar\Github\Java\ClientesServer\WebContent.
 
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-11-28 07:19:21.066
-!MESSAGE The Tomcat server configuration at \Servers\Tomcat v7.0 Server at localhost-config is missing. Check the server for errors.
-!SESSION 2016-11-28 07:21:00.731 -----------------------------------------------
-eclipse.buildId=4.5.0.I20150603-2000
-java.version=1.8.0_111
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-11-28 07:21:11.023
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\moises'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.jface.text 2 0 2016-11-28 08:13:10.192
+!ENTRY org.eclipse.jface.text 2 0 2016-11-30 20:56:47.644
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -266,7 +1074,7 @@ java.lang.NullPointerException
 	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 
-!ENTRY org.eclipse.jface.text 2 0 2016-11-28 08:14:02.003
+!ENTRY org.eclipse.jface.text 2 0 2016-11-30 20:57:05.694
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -284,7 +1092,7 @@ java.lang.NullPointerException
 	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 
-!ENTRY org.eclipse.jface.text 2 0 2016-11-28 08:14:04.377
+!ENTRY org.eclipse.jface.text 2 0 2016-11-30 20:57:10.111
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -302,7 +1110,7 @@ java.lang.NullPointerException
 	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 
-!ENTRY org.eclipse.ui 4 0 2016-11-28 08:14:05.955
+!ENTRY org.eclipse.ui 4 0 2016-11-30 20:57:10.602
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.NullPointerException
@@ -350,7 +1158,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.jface.text 2 0 2016-11-28 08:14:16.634
+!ENTRY org.eclipse.jface.text 2 0 2016-11-30 20:57:22.485
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -367,648 +1175,3 @@ java.lang.NullPointerException
 	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getAdditionalProposalInfo(CUCorrectionProposal.java:141)
 	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-
-!ENTRY org.eclipse.jface.text 2 0 2016-11-28 08:15:07.754
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jdt.core.dom.rewrite.ImportRewrite.annotateType(ImportRewrite.java:1307)
-	at org.eclipse.jdt.core.dom.rewrite.ImportRewrite.internalAddImport(ImportRewrite.java:1411)
-	at org.eclipse.jdt.core.dom.rewrite.ImportRewrite.addImport(ImportRewrite.java:855)
-	at org.eclipse.jdt.internal.ui.text.correction.proposals.ChangeMethodSignatureProposal.modifyParameters(ChangeMethodSignatureProposal.java:213)
-	at org.eclipse.jdt.internal.ui.text.correction.proposals.ChangeMethodSignatureProposal.getRewrite(ChangeMethodSignatureProposal.java:131)
-	at org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:113)
-	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createTextChange(CUCorrectionProposal.java:234)
-	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createChange(CUCorrectionProposal.java:244)
-	at org.eclipse.jdt.ui.text.java.correction.ChangeCorrectionProposal.getChange(ChangeCorrectionProposal.java:377)
-	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getTextChange(CUCorrectionProposal.java:254)
-	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getAdditionalProposalInfo(CUCorrectionProposal.java:141)
-	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-
-!ENTRY org.eclipse.jface.text 2 0 2016-11-28 08:30:21.862
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jdt.core.dom.rewrite.ImportRewrite.annotateType(ImportRewrite.java:1307)
-	at org.eclipse.jdt.core.dom.rewrite.ImportRewrite.internalAddImport(ImportRewrite.java:1411)
-	at org.eclipse.jdt.core.dom.rewrite.ImportRewrite.addImport(ImportRewrite.java:855)
-	at org.eclipse.jdt.internal.ui.text.correction.proposals.ChangeMethodSignatureProposal.modifyParameters(ChangeMethodSignatureProposal.java:213)
-	at org.eclipse.jdt.internal.ui.text.correction.proposals.ChangeMethodSignatureProposal.getRewrite(ChangeMethodSignatureProposal.java:131)
-	at org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:113)
-	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createTextChange(CUCorrectionProposal.java:234)
-	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createChange(CUCorrectionProposal.java:244)
-	at org.eclipse.jdt.ui.text.java.correction.ChangeCorrectionProposal.getChange(ChangeCorrectionProposal.java:377)
-	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getTextChange(CUCorrectionProposal.java:254)
-	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getAdditionalProposalInfo(CUCorrectionProposal.java:141)
-	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-
-!ENTRY org.eclipse.jdt.core 4 4 2016-11-28 08:35:46.598
-!MESSAGE Exception occurred during compilation unit conversion:
------------------------------------ SOURCE BEGIN -------------------------------------
-package com.calculos;
-
-public class Aritmetica {
-	float result;
-	String ex;
-	
-	
-	protected String getResult() {
-		return String.valueOf(result);
-	}
-
-		
-	protected void setResult(float result) {
-		if([])
-			this.result = result;
-	}
-	
-	
-	protected void calcula(String operacao, float valor1, float valor2 ){
-	
-		switch (operacao) {
-		
-		case "+":
-			setResult((valor1+valor2));
-			break;
-		
-		case "-":
-			setResult((valor1-valor2));
-			break;
-		
-		case "/":
-			setResult((valor1/valor2));
-			break;
-			
-		case "*":
-			setResult((valor1*valor2));		
-			break;
-		
-		default:
-			setResult((Float) null);
-			break;
-		}		
-	}		
-}
-
------------------------------------ SOURCE END -------------------------------------
-!STACK 0
-java.lang.IllegalArgumentException
-	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
-	at org.eclipse.jdt.core.dom.ASTConverter.setTypeAnnotationsAndSourceRangeOnArray(ASTConverter.java:3420)
-	at org.eclipse.jdt.core.dom.ASTConverter.convertToArray(ASTConverter.java:3166)
-	at org.eclipse.jdt.core.dom.ASTConverter.convertType(ASTConverter.java:3628)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1326)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1717)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1947)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2705)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
-	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
-	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:270)
-	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:202)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
-	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1085)
-	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:171)
-	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
-	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
-	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
-	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
-	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
-	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
-
-!ENTRY org.eclipse.jdt.ui 4 2 2016-11-28 08:35:46.628
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
-!STACK 0
-java.lang.IllegalArgumentException
-	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
-	at org.eclipse.jdt.core.dom.ASTConverter.setTypeAnnotationsAndSourceRangeOnArray(ASTConverter.java:3420)
-	at org.eclipse.jdt.core.dom.ASTConverter.convertToArray(ASTConverter.java:3166)
-	at org.eclipse.jdt.core.dom.ASTConverter.convertType(ASTConverter.java:3628)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1326)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1717)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1947)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2705)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
-	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
-	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:270)
-	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:202)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
-	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1085)
-	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:171)
-	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
-	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
-	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
-	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
-	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
-	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
-
-!ENTRY org.eclipse.jdt.ui 4 0 2016-11-28 08:35:46.636
-!MESSAGE Error in JDT Core during reconcile
-!STACK 0
-java.lang.IllegalArgumentException
-	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
-	at org.eclipse.jdt.core.dom.ASTConverter.setTypeAnnotationsAndSourceRangeOnArray(ASTConverter.java:3420)
-	at org.eclipse.jdt.core.dom.ASTConverter.convertToArray(ASTConverter.java:3166)
-	at org.eclipse.jdt.core.dom.ASTConverter.convertType(ASTConverter.java:3628)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1326)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1717)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1947)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2705)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
-	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
-	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:270)
-	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:202)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
-	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1085)
-	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:171)
-	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
-	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
-	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
-	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
-	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
-	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-11-28 08:53:10.171
-!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-11-28 08:53:13.819
-!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-11-28 08:59:44.660
-!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-11-28 09:00:19.035
-!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-11-28 09:03:21.746
-!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-11-28 09:03:50.265
-!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-11-28 09:03:56.474
-!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
-!SESSION 2016-11-29 06:50:03.445 -----------------------------------------------
-eclipse.buildId=4.5.0.I20150603-2000
-java.version=1.8.0_111
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-11-29 06:50:21.608
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\moises'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-!SESSION 2016-11-29 22:08:40.559 -----------------------------------------------
-eclipse.buildId=4.5.0.I20150603-2000
-java.version=1.8.0_111
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-11-29 22:09:02.221
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\moises'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.recommenders.rcp 4 5 2016-11-29 22:53:45.362
-!MESSAGE Failed to resolve selection in ‘=ClienteServer/src<com.app{app.java’ at offset 305
-!STACK 0
-org.eclipse.recommenders.utils.Logs$LogTraceException
-	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
-	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
-	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromTypeRootInEditor(JavaElementSelections.java:164)
-	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromEditor(JavaElementSelections.java:119)
-	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromEditor(JavaElementSelections.java:102)
-	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService.handleSelectionInEditor(JavaElementSelectionService.java:108)
-	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService.access$1(JavaElementSelectionService.java:105)
-	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService$1.run(JavaElementSelectionService.java:82)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-!SESSION 2016-11-30 05:39:04.647 -----------------------------------------------
-eclipse.buildId=4.5.0.I20150603-2000
-java.version=1.8.0_111
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-11-30 05:39:20.031
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\moises'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.wst.server.core 4 0 2016-11-30 05:40:04.083
-!MESSAGE Could not publish to the server.
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jst.common.internal.modulecore.IgnoreJavaInSourceFolderParticipant.shouldAddExportableFile(IgnoreJavaInSourceFolderParticipant.java:64)
-	at org.eclipse.wst.common.componentcore.internal.flat.FlatVirtualComponent.shouldAddComponentFile(FlatVirtualComponent.java:288)
-	at org.eclipse.wst.common.componentcore.internal.flat.VirtualComponentFlattenUtility.addFile(VirtualComponentFlattenUtility.java:122)
-	at org.eclipse.wst.common.componentcore.internal.flat.VirtualComponentFlattenUtility.addMembersInternal(VirtualComponentFlattenUtility.java:99)
-	at org.eclipse.wst.common.componentcore.internal.flat.VirtualComponentFlattenUtility.addMembersInternal(VirtualComponentFlattenUtility.java:96)
-	at org.eclipse.wst.common.componentcore.internal.flat.VirtualComponentFlattenUtility.addMembers(VirtualComponentFlattenUtility.java:51)
-	at org.eclipse.wst.common.componentcore.internal.flat.FlatVirtualComponent.treeWalk(FlatVirtualComponent.java:230)
-	at org.eclipse.wst.common.componentcore.internal.flat.FlatVirtualComponent.cacheResources(FlatVirtualComponent.java:188)
-	at org.eclipse.wst.common.componentcore.internal.flat.FlatVirtualComponent.fetchResources(FlatVirtualComponent.java:118)
-	at org.eclipse.wst.web.internal.deployables.FlatComponentDeployable.members(FlatComponentDeployable.java:227)
-	at org.eclipse.jst.j2ee.internal.deployables.J2EEFlexProjDeployable.members(J2EEFlexProjDeployable.java:267)
-	at org.eclipse.wst.server.core.internal.ModulePublishInfo.fillCache(ModulePublishInfo.java:314)
-	at org.eclipse.wst.server.core.internal.ModulePublishInfo.getDelta(ModulePublishInfo.java:396)
-	at org.eclipse.wst.server.core.internal.ServerPublishInfo.getDelta(ServerPublishInfo.java:366)
-	at org.eclipse.wst.server.core.internal.Server.getPublishedResourceDelta(Server.java:1575)
-	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.getPublishedResourceDelta(ServerBehaviourDelegate.java:698)
-	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.getPublishedResourceDelta(TomcatServerBehaviour.java:958)
-	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.computeDelta(ServerBehaviourDelegate.java:874)
-	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:909)
-	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
-	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3157)
-	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-
-!ENTRY org.eclipse.wst.server.core 4 0 2016-11-30 05:40:10.602
-!MESSAGE Could not publish to the server.
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jst.common.internal.modulecore.IgnoreJavaInSourceFolderParticipant.shouldAddExportableFile(IgnoreJavaInSourceFolderParticipant.java:64)
-	at org.eclipse.wst.common.componentcore.internal.flat.FlatVirtualComponent.shouldAddComponentFile(FlatVirtualComponent.java:288)
-	at org.eclipse.wst.common.componentcore.internal.flat.VirtualComponentFlattenUtility.addFile(VirtualComponentFlattenUtility.java:122)
-	at org.eclipse.wst.common.componentcore.internal.flat.VirtualComponentFlattenUtility.addMembersInternal(VirtualComponentFlattenUtility.java:99)
-	at org.eclipse.wst.common.componentcore.internal.flat.VirtualComponentFlattenUtility.addMembersInternal(VirtualComponentFlattenUtility.java:96)
-	at org.eclipse.wst.common.componentcore.internal.flat.VirtualComponentFlattenUtility.addMembers(VirtualComponentFlattenUtility.java:51)
-	at org.eclipse.wst.common.componentcore.internal.flat.FlatVirtualComponent.treeWalk(FlatVirtualComponent.java:230)
-	at org.eclipse.wst.common.componentcore.internal.flat.FlatVirtualComponent.cacheResources(FlatVirtualComponent.java:188)
-	at org.eclipse.wst.common.componentcore.internal.flat.FlatVirtualComponent.fetchResources(FlatVirtualComponent.java:118)
-	at org.eclipse.wst.web.internal.deployables.FlatComponentDeployable.members(FlatComponentDeployable.java:227)
-	at org.eclipse.jst.j2ee.internal.deployables.J2EEFlexProjDeployable.members(J2EEFlexProjDeployable.java:267)
-	at org.eclipse.wst.server.core.internal.ModulePublishInfo.fillCache(ModulePublishInfo.java:314)
-	at org.eclipse.wst.server.core.internal.ModulePublishInfo.getDelta(ModulePublishInfo.java:396)
-	at org.eclipse.wst.server.core.internal.ServerPublishInfo.getDelta(ServerPublishInfo.java:366)
-	at org.eclipse.wst.server.core.internal.Server.getPublishedResourceDelta(Server.java:1575)
-	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.getPublishedResourceDelta(ServerBehaviourDelegate.java:698)
-	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.getPublishedResourceDelta(TomcatServerBehaviour.java:958)
-	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.computeDelta(ServerBehaviourDelegate.java:874)
-	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:909)
-	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
-	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3157)
-	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-
-!ENTRY org.eclipse.wst.server.core 4 0 2016-11-30 05:45:16.902
-!MESSAGE Could not publish to the server.
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jst.common.internal.modulecore.IgnoreJavaInSourceFolderParticipant.shouldAddExportableFile(IgnoreJavaInSourceFolderParticipant.java:64)
-	at org.eclipse.wst.common.componentcore.internal.flat.FlatVirtualComponent.shouldAddComponentFile(FlatVirtualComponent.java:288)
-	at org.eclipse.wst.common.componentcore.internal.flat.VirtualComponentFlattenUtility.addFile(VirtualComponentFlattenUtility.java:122)
-	at org.eclipse.wst.common.componentcore.internal.flat.VirtualComponentFlattenUtility.addMembersInternal(VirtualComponentFlattenUtility.java:99)
-	at org.eclipse.wst.common.componentcore.internal.flat.VirtualComponentFlattenUtility.addMembersInternal(VirtualComponentFlattenUtility.java:96)
-	at org.eclipse.wst.common.componentcore.internal.flat.VirtualComponentFlattenUtility.addMembers(VirtualComponentFlattenUtility.java:51)
-	at org.eclipse.wst.common.componentcore.internal.flat.FlatVirtualComponent.treeWalk(FlatVirtualComponent.java:230)
-	at org.eclipse.wst.common.componentcore.internal.flat.FlatVirtualComponent.cacheResources(FlatVirtualComponent.java:188)
-	at org.eclipse.wst.common.componentcore.internal.flat.FlatVirtualComponent.fetchResources(FlatVirtualComponent.java:118)
-	at org.eclipse.wst.web.internal.deployables.FlatComponentDeployable.members(FlatComponentDeployable.java:227)
-	at org.eclipse.jst.j2ee.internal.deployables.J2EEFlexProjDeployable.members(J2EEFlexProjDeployable.java:267)
-	at org.eclipse.wst.server.core.internal.ModulePublishInfo.fillCache(ModulePublishInfo.java:314)
-	at org.eclipse.wst.server.core.internal.ModulePublishInfo.getDelta(ModulePublishInfo.java:396)
-	at org.eclipse.wst.server.core.internal.ServerPublishInfo.getDelta(ServerPublishInfo.java:366)
-	at org.eclipse.wst.server.core.internal.Server.getPublishedResourceDelta(Server.java:1575)
-	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.getPublishedResourceDelta(ServerBehaviourDelegate.java:698)
-	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.getPublishedResourceDelta(TomcatServerBehaviour.java:958)
-	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.computeDelta(ServerBehaviourDelegate.java:874)
-	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:909)
-	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
-	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3157)
-	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-!SESSION 2016-11-30 05:58:59.181 -----------------------------------------------
-eclipse.buildId=4.5.0.I20150603-2000
-java.version=1.8.0_111
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data file:/D:/Neimar/GitHub/WebServices/sv/ -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-11-30 05:59:37.035
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\moises'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.ui 4 4 2016-11-30 06:48:04.016
-!MESSAGE Save All Failed
-
-!ENTRY org.eclipse.ui 2 0 2016-11-30 06:48:04.414
-!MESSAGE Save All Failed
-!STACK 0
-java.lang.IllegalArgumentException: Illegal value: -1
-	at org.eclipse.core.internal.resources.Resource.revertModificationStamp(Resource.java:1618)
-	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:403)
-	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.commit(ResourceFileBuffer.java:327)
-	at org.eclipse.jdt.internal.ui.javaeditor.DocumentAdapter.save(DocumentAdapter.java:472)
-	at org.eclipse.jdt.internal.core.CommitWorkingCopyOperation.executeOperation(CommitWorkingCopyOperation.java:123)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:794)
-	at org.eclipse.jdt.internal.core.CompilationUnit.commitWorkingCopy(CompilationUnit.java:391)
-	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.commitWorkingCopy(CompilationUnitDocumentProvider.java:1378)
-	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider$4.execute(CompilationUnitDocumentProvider.java:1458)
-	at org.eclipse.ui.editors.text.TextFileDocumentProvider$DocumentProviderOperation.run(TextFileDocumentProvider.java:132)
-	at org.eclipse.ui.actions.WorkspaceModifyDelegatingOperation.execute(WorkspaceModifyDelegatingOperation.java:70)
-	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:108)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
-	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:130)
-	at org.eclipse.ui.internal.editors.text.WorkspaceOperationRunner.run(WorkspaceOperationRunner.java:75)
-	at org.eclipse.ui.internal.editors.text.WorkspaceOperationRunner.run(WorkspaceOperationRunner.java:65)
-	at org.eclipse.ui.editors.text.TextFileDocumentProvider.executeOperation(TextFileDocumentProvider.java:456)
-	at org.eclipse.ui.editors.text.TextFileDocumentProvider.saveDocument(TextFileDocumentProvider.java:772)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.performSave(AbstractTextEditor.java:5076)
-	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.performSave(CompilationUnitEditor.java:1244)
-	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSave(CompilationUnitEditor.java:1298)
-	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.doSave(AbstractTextEditor.java:7209)
-	at org.eclipse.ui.Saveable.doSave(Saveable.java:216)
-	at org.eclipse.ui.internal.SaveableHelper.doSaveModel(SaveableHelper.java:357)
-	at org.eclipse.ui.internal.SaveablesList$3.run(SaveablesList.java:665)
-	at org.eclipse.ui.internal.SaveableHelper$5.run(SaveableHelper.java:285)
-	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:463)
-	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:371)
-	at org.eclipse.ui.internal.WorkbenchWindow$14.run(WorkbenchWindow.java:2156)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
-	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2152)
-	at org.eclipse.ui.internal.SaveableHelper.runProgressMonitorOperation(SaveableHelper.java:293)
-	at org.eclipse.ui.internal.SaveablesList.saveModels(SaveablesList.java:675)
-	at org.eclipse.ui.internal.SaveablesList.saveModels(SaveablesList.java:632)
-	at org.eclipse.ui.internal.SaveablesList.promptForSaving(SaveablesList.java:617)
-	at org.eclipse.ui.internal.SaveablesList.promptForSavingIfNecessary(SaveablesList.java:449)
-	at org.eclipse.ui.internal.SaveablesList.preCloseParts(SaveablesList.java:405)
-	at org.eclipse.ui.internal.SaveablesList.preCloseParts(SaveablesList.java:355)
-	at org.eclipse.ui.internal.SaveablesList.preCloseParts(SaveablesList.java:350)
-	at org.eclipse.ui.internal.WorkbenchWindow$7.save(WorkbenchWindow.java:587)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.savePart(PartServiceImpl.java:1342)
-	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1277)
-	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.access$4(StackRenderer.java:1260)
-	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$11.close(StackRenderer.java:1145)
-	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1921)
-	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:335)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-11-30 06:48:28.801
-!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
-
-!ENTRY org.eclipse.egit.core 4 0 2016-11-30 08:34:55.031
-!MESSAGE An exception occurred during push on URI https://github.com/Neimarmg/Java.git: https://github.com/Neimarmg/Java.git: not authorized
-!STACK 0
-org.eclipse.jgit.api.errors.TransportException: https://github.com/Neimarmg/Java.git: not authorized
-	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:164)
-	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:228)
-	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:167)
-	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:229)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/Neimarmg/Java.git: not authorized
-	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:498)
-	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:387)
-	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
-	at org.eclipse.jgit.transport.Transport.push(Transport.java:1200)
-	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:157)
-	... 4 more
-!SESSION 2016-11-30 08:39:49.071 -----------------------------------------------
-eclipse.buildId=4.5.0.I20150603-2000
-java.version=1.8.0_111
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface 2 0 2016-11-30 08:40:11.523
-!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
-!STACK 0
-java.lang.RuntimeException
-	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:760)
-	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:527)
-	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:347)
-	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:490)
-	at org.eclipse.ui.internal.navigator.resources.workbench.ResourceExtensionContentProvider$3.run(ResourceExtensionContentProvider.java:282)
-	at org.eclipse.ui.internal.navigator.resources.workbench.ResourceExtensionContentProvider.runUpdates(ResourceExtensionContentProvider.java:293)
-	at org.eclipse.ui.internal.navigator.resources.workbench.ResourceExtensionContentProvider.processDelta(ResourceExtensionContentProvider.java:104)
-	at org.eclipse.ui.model.WorkbenchContentProvider.resourceChanged(WorkbenchContentProvider.java:109)
-	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
-	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
-	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
-	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
-	at org.eclipse.core.internal.resources.Project.touch(Project.java:1312)
-	at org.eclipse.wst.jsdt.internal.core.SetContainerOperation.execute(SetContainerOperation.java:122)
-	at org.eclipse.wst.jsdt.core.JavaScriptCore.setJsGlobalScopeContainer(JavaScriptCore.java:3924)
-	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.initialize(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:135)
-	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2216)
-	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.getJsGlobalScopeContainer(JavaModelManager.java:1538)
-	at org.eclipse.wst.jsdt.core.JavaScriptCore.getJsGlobalScopeContainer(JavaScriptCore.java:1342)
-	at org.eclipse.wst.jsdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2747)
-	at org.eclipse.wst.jsdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2026)
-	at org.eclipse.wst.jsdt.internal.core.SetContainerOperation.execute(SetContainerOperation.java:96)
-	at org.eclipse.wst.jsdt.core.JavaScriptCore.setJsGlobalScopeContainer(JavaScriptCore.java:3924)
-	at org.eclipse.wst.jsdt.launching.JREContainerInitializer.initialize(JREContainerInitializer.java:48)
-	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2216)
-	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.getJsGlobalScopeContainer(JavaModelManager.java:1538)
-	at org.eclipse.wst.jsdt.core.JavaScriptCore.getJsGlobalScopeContainer(JavaScriptCore.java:1342)
-	at org.eclipse.wst.jsdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2747)
-	at org.eclipse.wst.jsdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2026)
-	at org.eclipse.wst.jsdt.internal.core.JavaProject.buildStructure(JavaProject.java:465)
-	at org.eclipse.wst.jsdt.internal.core.Openable.generateInfos(Openable.java:241)
-	at org.eclipse.wst.jsdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:538)
-	at org.eclipse.wst.jsdt.internal.core.JavaElement.getElementInfo(JavaElement.java:282)
-	at org.eclipse.wst.jsdt.internal.core.JavaElement.getElementInfo(JavaElement.java:268)
-	at org.eclipse.wst.jsdt.internal.core.JavaElement.getChildren(JavaElement.java:216)
-	at org.eclipse.wst.jsdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:1902)
-	at org.eclipse.wst.jsdt.internal.ui.packageview.PackageExplorerContentProvider.getPackageFragmentRoots(PackageExplorerContentProvider.java:651)
-	at org.eclipse.wst.jsdt.ui.StandardJavaScriptElementContentProvider.getChildren(StandardJavaScriptElementContentProvider.java:163)
-	at org.eclipse.wst.jsdt.internal.ui.packageview.PackageExplorerContentProvider.getChildren(PackageExplorerContentProvider.java:398)
-	at org.eclipse.wst.jsdt.internal.ui.navigator.JavaNavigatorContentProvider.getChildren(JavaNavigatorContentProvider.java:157)
-	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:95)
-	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:241)
-	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:93)
-	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:157)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:143)
-	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:129)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
-	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
-	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:906)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
-	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
-	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1493)
-	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
-	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1505)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1122)
-	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
-	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5690)
-	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1956)
-	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5242)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4718)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
-	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
-	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
-	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
-	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4698)
-	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-11-30 08:40:15.148
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\moises'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-11-30 08:41:06.085
-!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
-!SESSION 2016-11-30 08:42:58.065 -----------------------------------------------
-eclipse.buildId=4.5.0.I20150603-2000
-java.version=1.8.0_111
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-11-30 08:43:15.254
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\moises'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-!SESSION 2016-11-30 12:46:02.703 -----------------------------------------------
-eclipse.buildId=4.5.0.I20150603-2000
-java.version=1.8.0_111
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-11-30 12:46:16.460
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\moises'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-!SESSION 2016-11-30 12:55:00.297 -----------------------------------------------
-eclipse.buildId=4.5.0.I20150603-2000
-java.version=1.8.0_111
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-11-30 12:55:13.512
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\moises'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
