@@ -3,6 +3,9 @@
 	<name>Servers</name>
 	<comment></comment>
 	<projects>
+		<project>calculador</project>
+		<project>RemoteSystemsTempFiles</project>
+		<project>wsMatematica</project>
 	</projects>
 	<buildSpec>
 	</buildSpec>

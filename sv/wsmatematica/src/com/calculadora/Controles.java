@@ -2,7 +2,7 @@ package com.calculadora;
 
 public class Controles {
 	
-	private static void carregaOperacao (){
+	private static void calcula (){
 		
 		switch (Operadores.getOperacao()) {
 		
@@ -49,7 +49,7 @@ public class Controles {
 			return 0;
 			
 		}else{
-			carregaOperacao();
+			calcula();
 			return DadosBase.getValorResultado();
 		}
 	}
